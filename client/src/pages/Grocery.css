@@ -1,0 +1,212 @@
+/* ============================================
+   LUXTRA - GROCERY PAGE STYLES
+   ============================================ */
+
+.grocery-page {
+    min-height: 60vh;
+    padding: 2rem 0 4rem;
+}
+
+/* Hero Banner */
+.grocery-hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(135deg, #0a4d0a 0%, #0f5f0f 50%, #1a7a1a 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.grocery-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.grocery-hero-content h1 span {
+    color: #7fff7f;
+}
+
+.grocery-hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.hero-features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-features span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.grocery-hero-image {
+    font-size: 8rem;
+}
+
+/* Categories */
+.grocery-categories {
+    margin-bottom: 3rem;
+}
+
+.grocery-categories h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.grocery-categories .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.grocery-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background: #16162a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.grocery-category-card:hover {
+    border-color: rgba(0, 200, 83, 0.3);
+    transform: translateY(-3px);
+}
+
+.category-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.grocery-category-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.category-count {
+    font-size: 0.8rem;
+    color: #6c6c7c;
+}
+
+/* Deals Section */
+.grocery-deals,
+.grocery-all {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.deal-timer {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    border-radius: 50px;
+    color: #ff4757;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.item-count {
+    color: #a0a0b0;
+    font-size: 0.9rem;
+}
+
+.grocery-page .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1279px) {
+    .grocery-page .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grocery-categories .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    .grocery-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .grocery-hero-image {
+        display: none;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+
+    .grocery-categories .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .grocery-hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .grocery-categories .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grocery-page .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .grocery-page {
+        padding: 1rem 0 3rem;
+    }
+
+    .grocery-hero {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

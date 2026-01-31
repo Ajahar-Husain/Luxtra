@@ -1,0 +1,245 @@
+/* ============================================
+   LUXTRA - PROFILE PAGE STYLES
+   ============================================ */
+
+.profile-page {
+    min-height: 60vh;
+    padding: 2rem 0 4rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #16162a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.profile-info p {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50px;
+    color: #ffd700;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.edit-profile-btn {
+    padding: 0.6rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #667eea;
+}
+
+.profile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Stats */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: #16162a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #6c6c7c;
+}
+
+/* Menu */
+.profile-menu {
+    background: #16162a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.menu-icon {
+    font-size: 1.25rem;
+}
+
+.menu-label {
+    flex: 1;
+    text-align: left;
+}
+
+.menu-count {
+    padding: 0.2rem 0.6rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 50px;
+    color: #667eea;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.menu-arrow {
+    color: #6c6c7c;
+}
+
+.menu-item.logout {
+    color: #ff4757;
+}
+
+.menu-item.logout:hover {
+    background: rgba(255, 71, 87, 0.1);
+}
+
+/* Not Logged In */
+.not-logged-in {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.not-logged-in span {
+    font-size: 4rem;
+}
+
+.not-logged-in h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 1rem 0 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .profile-page {
+        padding: 1rem 0 3rem;
+    }
+
+    .profile-header,
+    .profile-menu {
+        border-radius: 12px;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
