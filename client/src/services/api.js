@@ -9,6 +9,9 @@ const api = axios.create({
   },
 });
 
+console.log('Using API URL:', API_URL);
+
+
 // Request interceptor for auth token
 api.interceptors.request.use(
   (config) => {
