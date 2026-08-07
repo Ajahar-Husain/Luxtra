@@ -21,6 +21,10 @@ const Orders = lazy(() => import('./pages/Orders'));
 const Login = lazy(() => import('./components/auth/Login'));
 const Register = lazy(() => import('./components/auth/Register'));
 const Profile = lazy(() => import('./pages/Profile'));
+const Addresses = lazy(() => import('./pages/Addresses'));
+const PaymentMethods = lazy(() => import('./pages/PaymentMethods'));
+const Notifications = lazy(() => import('./pages/Notifications'));
+const Settings = lazy(() => import('./pages/Settings'));
 
 // Layout wrapper with header/footer
 const Layout = ({ children }) => {
@@ -65,6 +69,10 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/addresses" element={<Addresses />} />
+        <Route path="/payments" element={<PaymentMethods />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Layout>
   );

@@ -9,8 +9,6 @@ const api = axios.create({
   },
 });
 
-console.log('Using API URL:', API_URL);
-
 
 // Request interceptor for auth token
 api.interceptors.request.use(
@@ -69,7 +67,7 @@ export const cartAPI = {
 // Order APIs
 export const orderAPI = {
   create: (data) => api.post('/orders', data),
-  getAll: () => api.get('/orders'),
+  getAll: () => api.get('/orders/mine'),
   getById: (id) => api.get(`/orders/${id}`),
   cancel: (id) => api.put(`/orders/${id}/cancel`),
 };

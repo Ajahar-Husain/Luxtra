@@ -10,12 +10,19 @@ const orderRoutes = require('./routes/orders');
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+    'http://localhost:5173',
+    process.env.CLIENT_URL
+].filter(Boolean);
+
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/products', require('./routes/products'));
+app.use('/api/cart', require('./routes/cart'));
 
 // Root Mock Route to verify server running
 app.get('/', (req, res) => {
@@ -23,9 +30,9 @@ app.get('/', (req, res) => {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
-        console.log('MongoDB Connected');
+        console.log('MongoDB Connected:', mongoose.connection.host);
         const PORT = process.env.PORT || 5000;
         app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     })

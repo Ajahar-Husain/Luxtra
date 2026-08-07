@@ -6,7 +6,15 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     phone: { type: String, required: true },
+    address: { type: String, default: '' },
+    avatar: { type: String, default: '' },
     role: { type: String, default: 'user' },
+    cart: [
+        {
+            product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
+            quantity: { type: Number, default: 1 }
+        }
+    ],
     createdAt: { type: Date, default: Date.now }
 });
 

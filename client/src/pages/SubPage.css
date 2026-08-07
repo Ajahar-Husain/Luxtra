@@ -1,0 +1,511 @@
+/* ============================================
+   LUXTRA — SUB-PAGES SHARED STYLES
+   ============================================ */
+
+.subpage {
+    min-height: 80vh;
+    padding: 2.5rem 0 5rem;
+}
+
+/* ── Header ──────────────────────────────── */
+.subpage-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.subpage-header > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.subpage-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.2rem;
+}
+
+.subpage-header p {
+    color: #8888aa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ── Back Button ─────────────────────────── */
+.sp-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    color: #8888aa;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sp-back-btn:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+/* ── Primary Button ──────────────────────── */
+.sp-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 16px rgba(102,126,234,0.3);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sp-btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ── Card ────────────────────────────────── */
+.sp-card {
+    background: #13132a;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: border-color 0.25s ease;
+}
+
+.sp-card.default {
+    border-color: rgba(102,126,234,0.35);
+}
+
+.sp-card:hover {
+    border-color: rgba(255,255,255,0.09);
+}
+
+/* ── Grid ────────────────────────────────── */
+.sp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+/* ── Address Card ────────────────────────── */
+.addr-top {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+}
+
+.addr-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.22rem 0.7rem;
+    background: rgba(102,126,234,0.1);
+    border: 1px solid rgba(102,126,234,0.25);
+    border-radius: 50px;
+    color: #667eea;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.default-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.22rem 0.7rem;
+    background: rgba(255,215,0,0.08);
+    border: 1px solid rgba(255,215,0,0.25);
+    border-radius: 50px;
+    color: #ffd700;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.addr-text {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+.addr-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ── Icon Buttons ────────────────────────── */
+.sp-icon-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #8888aa;
+}
+
+.sp-icon-btn.edit:hover { background: rgba(102,126,234,0.12); border-color: rgba(102,126,234,0.3); color: #667eea; }
+.sp-icon-btn.delete:hover { background: rgba(255,71,87,0.1); border-color: rgba(255,71,87,0.3); color: #ff4757; }
+
+.sp-link-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-right: auto;
+    transition: opacity 0.2s;
+}
+
+.sp-link-btn:hover { opacity: 0.75; }
+
+/* ── Payment Card Visual ─────────────────── */
+.payment-card { padding: 0; overflow: hidden; }
+
+.card-visual {
+    padding: 1.5rem;
+    border-radius: 18px 18px 0 0;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card-chip {
+    width: 36px;
+    height: 28px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.card-number-display {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.card-bottom-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.card-meta-label {
+    display: block;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.15rem;
+}
+
+.card-meta-val {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.card-brand {
+    margin-left: auto;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+}
+
+.payment-card .addr-actions {
+    padding: 1rem 1.5rem;
+    margin-top: 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* UPI Card */
+.upi-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upi-card h4 { color: #fff; font-size: 1rem; margin: 0 0 0.2rem; }
+.upi-card p  { color: #8888aa; font-size: 0.85rem; margin: 0; }
+.upi-card > div { flex: 1; }
+
+/* ── Notifications ───────────────────────── */
+.notif-layout,
+.settings-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.notif-group-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #6c6c8a;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0 0 1.1rem;
+}
+
+.notif-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.notif-row.bordered {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    margin-bottom: 0.25rem;
+}
+
+.menu-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.menu-icon-wrap svg { font-size: 1.15rem !important; }
+
+.notif-text { flex: 1; min-width: 0; }
+.notif-label { display: block; color: #d0d0e8; font-size: 0.92rem; font-weight: 500; }
+.notif-desc  { display: block; color: #6c6c8a; font-size: 0.8rem; margin-top: 0.15rem; }
+
+/* Toggle Switch */
+.sp-toggle {
+    width: 44px;
+    height: 24px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    position: relative;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.sp-toggle.on {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-color: transparent;
+}
+
+.sp-toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.25s ease;
+    display: block;
+}
+
+.sp-toggle.on .sp-toggle-thumb { transform: translateX(20px); }
+
+/* ── Settings ────────────────────────────── */
+.sp-select {
+    padding: 0.45rem 0.75rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 9px;
+    color: #d0d0e8;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    flex-shrink: 0;
+}
+
+.sp-select:focus { border-color: #667eea; }
+
+.danger-card { border-color: rgba(255,71,87,0.15); }
+
+.sp-danger-btn {
+    padding: 0.4rem 0.9rem;
+    background: rgba(255,71,87,0.1);
+    border: 1px solid rgba(255,71,87,0.25);
+    border-radius: 9px;
+    color: #ff4757;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sp-danger-btn:hover { background: rgba(255,71,87,0.2); border-color: #ff4757; }
+
+/* ── Modal ───────────────────────────────── */
+.sp-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.sp-modal {
+    background: #13132a;
+    border: 1px solid rgba(102,126,234,0.2);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+}
+
+.sp-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.sp-modal-header h2 { color: #fff; font-size: 1.25rem; font-weight: 700; margin: 0; }
+
+.sp-close-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    color: #8888aa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sp-close-btn:hover { background: rgba(255,71,87,0.1); border-color: rgba(255,71,87,0.3); color: #ff4757; }
+
+.sp-form-group { margin-bottom: 1rem; }
+.sp-form-group label { display: block; color: #8888aa; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+.sp-form-group input {
+    width: 100%;
+    padding: 0.72rem 1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sp-form-group input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.12); }
+
+.sp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+.sp-type-toggle { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+.sp-type-btn {
+    flex: 1;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 9px;
+    color: #8888aa;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sp-type-btn.active { background: rgba(102,126,234,0.15); border-color: rgba(102,126,234,0.4); color: #667eea; font-weight: 600; }
+
+.sp-error {
+    color: #ff4757;
+    font-size: 0.83rem;
+    padding: 0.55rem 0.9rem;
+    background: rgba(255,71,87,0.08);
+    border: 1px solid rgba(255,71,87,0.2);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.sp-modal-actions { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+
+.sp-btn-cancel {
+    flex: 1;
+    padding: 0.72rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    color: #8888aa;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sp-btn-cancel:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+/* ── Empty State ─────────────────────────── */
+.subpage-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    grid-column: 1 / -1;
+}
+
+.subpage-empty h2, .subpage-empty h3 { color: #fff; margin: 0; }
+.subpage-empty p { color: #8888aa; font-size: 0.9rem; margin: 0; }
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 767px) {
+    .subpage-header { gap: 0.9rem; }
+    .subpage-header h1 { font-size: 1.4rem; }
+    .sp-grid { grid-template-columns: 1fr; }
+    .sp-btn-primary { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 479px) {
+    .subpage { padding: 1rem 0 3rem; }
+    .notif-row { gap: 0.75rem; }
+    .sp-modal { padding: 1.5rem; }
+}

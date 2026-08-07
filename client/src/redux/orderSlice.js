@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { orderAPI } from '../services/api';
 
 const initialState = {
     orders: [],
@@ -13,47 +13,24 @@ const initialState = {
 
 export const createOrder = createAsyncThunk(
     'orders/createOrder',
-    async (orderData, { getState, rejectWithValue }) => {
+    async (orderData, { rejectWithValue }) => {
         try {
-            const { user } = getState();
-            const config = {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${user.token}`,
-                },
-            };
-
-            const { data } = await axios.post('http://localhost:5000/api/orders', orderData, config);
+            const { data } = await orderAPI.create(orderData);
             return data;
         } catch (error) {
-            return rejectWithValue(
-                error.response && error.response.data.message
-                    ? error.response.data.message
-                    : error.message
-            );
+            return rejectWithValue(error.response?.data?.message || error.message);
         }
     }
 );
 
 export const fetchMyOrders = createAsyncThunk(
     'orders/fetchMyOrders',
-    async (_, { getState, rejectWithValue }) => {
+    async (_, { rejectWithValue }) => {
         try {
-            const { user } = getState();
-            const config = {
-                headers: {
-                    Authorization: `Bearer ${user.token}`,
-                },
-            };
-
-            const { data } = await axios.get('http://localhost:5000/api/orders/mine', config);
+            const { data } = await orderAPI.getAll();
             return data;
         } catch (error) {
-            return rejectWithValue(
-                error.response && error.response.data.message
-                    ? error.response.data.message
-                    : error.message
-            );
+            return rejectWithValue(error.response?.data?.message || error.message);
         }
     }
 );
